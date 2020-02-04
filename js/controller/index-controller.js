@@ -9,18 +9,25 @@ app.controller("indexController", function($scope, $http){
     })
 
     offersPromise.then(function(response){
-        console.log(response)
+        //console.log(response)
         $scope.offers = response.data.offers;
     })
 
-    // var subscriptionsPromise = $http({
-    //     url: 'https://selfcare-service.demo.melita.com/interview/api/offers/100/subscriptions',
-    //     method: "get"
-    // })
+    $scope.getSubs = function(offer){
+        //console.log(offerId);
 
-    // subscriptionsPromise.then(function(response){
-    //     console.log(response)
+        var subscriptionsPromise = $http({
+            url: 'https://selfcare-service.demo.melita.com/interview/api/offers/' + offer.id + '/subscriptions',
+            method: "get"
+        })
 
-    // })
+        subscriptionsPromise.then(function(response){
+            //console.log()
+            $scope.subs = response.data.subscriptions;
+        })
+        
+    
+    }
+
 
 })

@@ -32,7 +32,9 @@
 
 <body ng-app="zadatak" ng-controller="indexController">
     
-    <div id="header"></div>
+    <div id="header">
+        <p id="navigation">HEADER NAVIGATION</p>
+    </div>
 
     <div id="page" class="container">
         <div class="row">
@@ -43,7 +45,7 @@
         
         <div class="row">
             
-            <div ng-click="" class="col-lg-3 col-md-3 col-sm-3 content-card" ng-repeat="offer in offers">
+            <div ng-click="getSubs(offer)" class="col-lg-3 col-md-3 col-sm-3 content-card" ng-repeat="offer in offers">
                 
                 <p class="content">{{ offer.name }}</p>
                 <p class="title">start date:</p>
@@ -58,20 +60,21 @@
         
         <div class="row">
 
-            <!-- <div class="col-lg-3 col-md-3 col-sm-3 content-card">
+            <div tabindex="1" class="col-lg-3 col-md-3 col-sm-3 content-card2" ng-repeat="sub in subs">
                 
-                <p class="content">{{ offer.name }}</p>
-                <p class="title">start date:</p>
-                <p class="content">{{ offer.contractStartDate }}</p>
-                <p class="title">end date:</p>
-                <p class="content">{{ offer.contractEndDate }}</p>
-            </div> -->
+                <p class="content">{{ sub.name }}</p>
+                <p class="title">type:</p>
+                <p class="content">{{ sub.type }}</p>
+                
+            </div>
             
         </div>
     
     </div>
 
-    <div id="footer"></div>
+    <div id="footer">
+        <p id="footer-title">Footer</p>
+    </div>
 
 </body>
 

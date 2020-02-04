@@ -18,8 +18,23 @@ body {
     background-color: #303030;
 }
 
+#footer-title {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    padding-top: 45px;
+}
+
 #page {
     min-height: 650px;
+}
+
+#navigation {
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+    margin-left: 15px;
 }
 
 hr {
@@ -27,12 +42,22 @@ hr {
     margin-right: -15px;
 }
 
-.content-card {
+.content-card, .content-card2 {
     border: 1px solid grey;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-right: 10px;
+    margin-top: 10px;
     border-radius: 3px;
+    cursor: pointer;
+}
+
+.content-card:hover {
+    border: 1px solid black;
+}
+
+.content-card2:focus {
+    background-color: #e0e0e0;
 }
 
 .title {
