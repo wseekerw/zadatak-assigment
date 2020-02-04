@@ -3,6 +3,11 @@ body {
     padding: 0;
 }
 
+@keyframes Appear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 #header {
     height: 40px;
     width: 100%;
@@ -27,7 +32,8 @@ body {
 }
 
 #page {
-    min-height: 650px;
+    min-height: 800px;
+    padding-bottom: 80px;
 }
 
 #navigation {
@@ -50,6 +56,9 @@ hr {
     margin-top: 10px;
     border-radius: 3px;
     cursor: pointer;
+    -webkit-animation: 1s ease-out 0s 1 Appear;
+    -moz-animation: 1s ease-out 0s 1 Appear;
+    animation: 1s ease-out 0s 1 Appear;
 }
 
 .content-card:hover {
@@ -58,6 +67,12 @@ hr {
 
 .content-card2:focus {
     background-color: #e0e0e0;
+    border: 1px solid black;
+    outline: none;
+}
+
+.content-title {
+    font-size: 17px;
 }
 
 .title {
@@ -65,8 +80,34 @@ hr {
     font-weight: bold;
 }
 
+#offers-title {
+    font-weight: bold;
+}
+
+#sub-title {
+    font-size: 18px;
+    font-weight: bold;
+    -webkit-animation: 1s ease-out 0s 1 Appear;
+    -moz-animation: 1s ease-out 0s 1 Appear;
+    animation: 1s ease-out 0s 1 Appear;
+}
+
+#offer-select {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
 .content {
     margin-top: 0;
     margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .row {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 

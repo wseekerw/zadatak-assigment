@@ -1,4 +1,4 @@
-var app = angular.module('zadatak');
+var app = angular.module('assigment');
 
 app.controller("indexController", function($scope, $http){
 
@@ -15,6 +15,8 @@ app.controller("indexController", function($scope, $http){
 
     $scope.getSubs = function(offer){
         //console.log(offerId);
+
+        $scope.selectedOffer = offer.name;
 
         var subscriptionsPromise = $http({
             url: 'https://selfcare-service.demo.melita.com/interview/api/offers/' + offer.id + '/subscriptions',

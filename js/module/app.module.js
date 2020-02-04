@@ -1,5 +1,1 @@
-angular.module('zadatak',[
-
-    'ui.bootstrap'
-    
-    ]);
+angular.module('assigment',[]);

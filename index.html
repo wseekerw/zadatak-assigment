@@ -12,7 +12,6 @@
 
     <!-- angular start -->
     <script src="/js/angular/angular-1.7-min.js"></script>
-    <script src="/js/angular/angular-ui-bootstrap.js"></script>
     <!-- angular end -->
 
     <!-- angular main module start -->
@@ -30,7 +29,7 @@
 
 </head>
 
-<body ng-app="zadatak" ng-controller="indexController">
+<body ng-app="assigment" ng-controller="indexController">
     
     <div id="header">
         <p id="navigation">HEADER NAVIGATION</p>
@@ -44,10 +43,12 @@
         <hr>
         
         <div class="row">
+
+            <p id="offers-title">Current offers:</p>
             
             <div ng-click="getSubs(offer)" class="col-lg-3 col-md-3 col-sm-3 content-card" ng-repeat="offer in offers">
                 
-                <p class="content">{{ offer.name }}</p>
+                <p class="content content-title">{{ offer.name }}</p>
                 <p class="title">start date:</p>
                 <p class="content">{{ offer.contractStartDate }}</p>
                 <p class="title">end date:</p>
@@ -59,6 +60,10 @@
         <hr>
         
         <div class="row">
+
+            <p ng-hide="!selectedOffer" id="sub-title">{{ selectedOffer }} subscriptions: </p>
+
+            <p ng-show="!selectedOffer" id="offer-select">Please select an offer to see the available subscriptions</p>
 
             <div tabindex="1" class="col-lg-3 col-md-3 col-sm-3 content-card2" ng-repeat="sub in subs">
                 
