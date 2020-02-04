@@ -25,12 +25,53 @@
 
     <!-- css start -->
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/bootstrap-3.3.7.min.css">
     <!-- css end -->
 
 </head>
 
 <body ng-app="zadatak" ng-controller="indexController">
+    
+    <div id="header"></div>
 
+    <div id="page" class="container">
+        <div class="row">
+            <h2>Hello customer</h2>
+            <p class="title">Page for offers and subscriptions</p>
+        </div>
+        <hr>
+        
+        <div class="row">
+            
+            <div ng-click="" class="col-lg-3 col-md-3 col-sm-3 content-card" ng-repeat="offer in offers">
+                
+                <p class="content">{{ offer.name }}</p>
+                <p class="title">start date:</p>
+                <p class="content">{{ offer.contractStartDate }}</p>
+                <p class="title">end date:</p>
+                <p class="content">{{ offer.contractEndDate }}</p>
+            </div>
+        
+        </div>
+        
+        <hr>
+        
+        <div class="row">
+
+            <!-- <div class="col-lg-3 col-md-3 col-sm-3 content-card">
+                
+                <p class="content">{{ offer.name }}</p>
+                <p class="title">start date:</p>
+                <p class="content">{{ offer.contractStartDate }}</p>
+                <p class="title">end date:</p>
+                <p class="content">{{ offer.contractEndDate }}</p>
+            </div> -->
+            
+        </div>
+    
+    </div>
+
+    <div id="footer"></div>
 
 </body>
 
