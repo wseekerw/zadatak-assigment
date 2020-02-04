@@ -13,8 +13,12 @@ app.controller("indexController", function($scope, $http){
         $scope.offers = response.data.offers;
     })
 
+    offersPromise.catch(function(err){
+        //console.log(err)
+    })
+
     $scope.getSubs = function(offer){
-        //console.log(offerId);
+        //console.log(offer);
 
         $scope.selectedOffer = offer.name;
 
@@ -24,8 +28,11 @@ app.controller("indexController", function($scope, $http){
         })
 
         subscriptionsPromise.then(function(response){
-            //console.log()
             $scope.subs = response.data.subscriptions;
+        })
+
+        subscriptionsPromise.catch(function(err){
+            //console.log(err)
         })
         
     
